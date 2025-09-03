@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .job-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .job-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .job-card:hover {
+            transform: translateY(-5px);
+        }
+        .job-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .job-company {
+            color: #3498db;
+            margin-bottom: 5px;
+        }
+        .job-location {
+            color: #7f8c8d;
+            margin-bottom: 5px;
+        }
+        .job-type {
+            color: #e74c3c;
+            font-size: 14px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 8px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: black;
+        }
+        .job-detail {
+            margin-bottom: 15px;
+        }
+        .job-detail strong {
+            display: inline-block;
+            width: 120px;
+        }
+        .job-description, .job-requirements, .job-skills {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Job Listings</h1>
+        <div class="job-list" id="jobList">
+            <!-- Jobs will be populated here -->
+        </div>
+    </div>
+
+    <!-- Modal for job details -->
+    <div id="jobModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div class="job-detail"><strong>Company:</strong> <span id="modalCompany"></span></div>
+            <div class="job-detail"><strong>Location:</strong> <span id="modalLocation"></span></div>
+            <div class="job-detail"><strong>Job Type:</strong> <span id="modalJobType"></span></div>
+            <div class="job-detail"><strong>Posted:</strong> <span id="modalPostedTime"></span></div>
+            <div class="job-detail"><strong>Category:</strong> <span id="modalCategory"></span></div>
+            <div class="job-detail"><strong>Source:</strong> <span id="modalSource"></span></div>
+            <div class="job-detail"><strong>Link:</strong> <a id="modalLink" href="#" target="_blank">View Job</a></div>
+            <div class="job-description">
+                <strong>Description:</strong><br>
+                <span id="modalDescription"></span>
+            </div>
+            <div class="job-requirements">
+                <strong>Requirements:</strong><br>
+                <span id="modalRequirements"></span>
+            </div>
+            <div class="job-skills">
+                <strong>Skills:</strong><br>
+                <span id="modalSkills"></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let jobs = [];
+
+        // Function to fetch jobs from the API
+        async function fetchJobs() {
+            try {
+                const response = await fetch('http://localhost:5000/api/jobs');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch jobs');
+                }
+                jobs = await response.json();
+                displayJobs();
+            } catch (error) {
+                console.error('Error fetching jobs:', error);
+                // Fallback to sample data if API is not available
+                jobs = [
+                    {
+                        id: 1,
+                        title: "Software Engineer",
+                        company: "Google",
+                        location: "Mountain View, CA",
+                        job_type: "Full-time",
+                        posted_time: "2023-10-01",
+                        job_link: "https://careers.google.com/jobs/123",
+                        description: "We are looking for a talented software engineer to join our team. You will work on cutting-edge technologies and help build the next generation of our products.",
+                        requirements: "Bachelor's degree in Computer Science or related field. 3+ years of experience in software development.",
+                        skills: "Python, Java, JavaScript, React, SQL",
+                        category: "Software Engineering",
+                        source: "LinkedIn"
+                    }
+                ];
+                displayJobs();
+            }
+        }
+
+        // Function to display jobs
+        function displayJobs() {
+            const jobList = document.getElementById('jobList');
+            jobList.innerHTML = ''; // Clear existing jobs
+            jobs.forEach(job => {
+                jobList.appendChild(createJobCard(job));
+            });
+        }
+
+        // Function to create job cards
+        function createJobCard(job) {
+            const card = document.createElement('div');
+            card.className = 'job-card';
+            card.innerHTML = `
+                <div class="job-title">${job.title}</div>
+                <div class="job-company">${job.company}</div>
+                <div class="job-location">${job.location}</div>
+                <div class="job-type">${job.job_type}</div>
+            `;
+            card.addEventListener('click', () => showJobDetails(job));
+            return card;
+        }
+
+        // Function to show job details in modal
+        function showJobDetails(job) {
+            document.getElementById('modalTitle').textContent = job.title;
+            document.getElementById('modalCompany').textContent = job.company;
+            document.getElementById('modalLocation').textContent = job.location;
+            document.getElementById('modalJobType').textContent = job.job_type;
+            document.getElementById('modalPostedTime').textContent = job.posted_time;
+            document.getElementById('modalCategory').textContent = job.category;
+            document.getElementById('modalSource').textContent = job.source;
+            document.getElementById('modalLink').href = job.job_link;
+            document.getElementById('modalDescription').textContent = job.description;
+            document.getElementById('modalRequirements').textContent = job.requirements;
+            document.getElementById('modalSkills').textContent = job.skills;
+            document.getElementById('jobModal').style.display = 'block';
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            fetchJobs();
+
+            // Close modal when clicking the close button
+            document.querySelector('.close').addEventListener('click', function() {
+                document.getElementById('jobModal').style.display = 'none';
+            });
+
+            // Close modal when clicking outside of it
+            window.addEventListener('click', function(event) {
+                const modal = document.getElementById('jobModal');
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
