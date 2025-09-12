@@ -9,10 +9,11 @@ from dataclasses import dataclass
 import time
 from urllib.parse import urljoin, urlparse
 import logging
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 import os
 from dotenv import load_dotenv
+from auth import require_auth, optional_auth, clerk_auth
 
 # Load environment variables
 load_dotenv()
@@ -355,9 +356,88 @@ CORS(app)
 job_manager = JobManager()
 
 @app.route('/api/jobs')
+@optional_auth
 def get_jobs():
-    jobs = job_manager.search_jobs()
-    return jsonify(jobs)
+    """Get jobs - optional authentication for public access"""
+    query = request.args.get('query', '')
+    category = request.args.get('category', '')
+    job_type = request.args.get('job_type', '')
+    location = request.args.get('location', '')
+    
+    jobs = job_manager.search_jobs(
+        query=query,
+        category=category,
+        job_type=job_type,
+        location=location
+    )
+    
+    response_data = {
+        'jobs': jobs,
+        'user_authenticated': request.current_user is not None
+    }
+    
+    if request.current_user:
+        response_data['user'] = {
+            'id': request.current_user['user_id'],
+            'email': request.current_user['email'],
+            'name': f"{request.current_user['first_name']} {request.current_user['last_name']}".strip()
+        }
+    
+    return jsonify(response_data)
+
+@app.route('/api/jobs/stats')
+@require_auth
+def get_job_stats():
+    """Get job statistics - requires authentication"""
+    stats = job_manager.get_job_stats()
+    return jsonify({
+        'stats': stats,
+        'user': {
+            'id': request.current_user['user_id'],
+            'email': request.current_user['email']
+        }
+    })
+
+@app.route('/api/jobs/manual', methods=['POST'])
+@require_auth
+def add_manual_job():
+    """Add a manual job - requires authentication"""
+    try:
+        job_data = request.get_json()
+        
+        # Validate required fields
+        required_fields = ['title', 'company', 'job_link']
+        for field in required_fields:
+            if field not in job_data:
+                return jsonify({'error': f'Missing required field: {field}'}), 400
+        
+        # Add the job
+        success = job_manager.add_manual_job(job_data)
+        
+        if success:
+            return jsonify({
+                'message': 'Job added successfully',
+                'user': request.current_user['user_id']
+            }), 201
+        else:
+            return jsonify({'error': 'Failed to add job - company not trusted'}), 400
+            
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/auth/verify')
+@require_auth
+def verify_auth():
+    """Verify authentication status"""
+    return jsonify({
+        'authenticated': True,
+        'user': {
+            'id': request.current_user['user_id'],
+            'email': request.current_user['email'],
+            'name': f"{request.current_user['first_name']} {request.current_user['last_name']}".strip(),
+            'username': request.current_user['username']
+        }
+    })
 
 # Example usage
 if __name__ == "__main__":
