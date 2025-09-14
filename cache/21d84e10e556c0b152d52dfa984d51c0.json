@@ -1,0 +1,204 @@
+{
+  "timestamp": "2025-09-14T16:37:05.958746",
+  "cache_key": "21d84e10e556c0b152d52dfa984d51c0",
+  "metadata": {
+    "keywords": "Python Developer",
+    "location": "San Francisco, CA",
+    "max_jobs": 10,
+    "job_type_filter": null,
+    "category_filter": null,
+    "trusted_only": true,
+    "scraped_at": "2025-09-14T16:37:05.958746"
+  },
+  "job_count": 6,
+  "data": [
+    {
+      "title": "Software Engineer, Fullstack, Early Career",
+      "company": "Notion",
+      "location": "San Francisco, CA",
+      "description": "About UsNotion helps you build beautiful tools for your life’s work. In today's world of endless apps and tabs, Notion provides one place for teams to get everything done, seamlessly connecting docs, notes, projects, calendar, and email—with AI built in to find answers and automate work. Millions of users, from individuals to large organizations like Toyota, Figma, and OpenAI, love Notion for its flexibility and choose it because it helps them save time and money.In-person collaboration is essential to Notion's culture. We require all team members to work from our offices on Mondays and Thursdays, our designated Anchor Days. Certain teams or positions may require additional in-office workdays.About The RoleAs an Early Career Software Engineer at Notion, you’ll help shape core user experiences and accelerate how people discover value in Notion. You'll tackle meaningful challenges with increasing autonomy, crafting code that millions of users will experience. You'll take ownership of projects that matter, make critical technical decisions, and contribute your unique perspective to our product vision. Working alongside passionate experts across design, product, and data, you'll help shape the future of how people work.We’re hiring early career engineers to join us across several teams at Notion. Your recruiter will partner with you to find the team that best aligns with your interests and where you can make the highest impact.What You’ll AchievePlan, build, and ship product features from conception to launch, then iterate based on insights and user feedback.Improve performance, reliability, and quality of key experiences used by millions of users and thousands of organizations.Run experiments that drive activation, retention, collaboration, and revenue, partnering with design, data science, and research.Build internal tools and platform improvements that help all engineers ship quickly and safely.Contribute to team norms, code quality, and a culture of learning and thoughtful tradeoffs.Areas you might work onCore Notion product features: Help develop, improve, and maintain features for our flagship product, focusing on the editor, databases, sharing, or other key areas that power millions of workflows.AI and automation: Help develop and integrate intelligent features that make Notion more powerful, contextual, and efficient for our users.Growth and activation: Work on features that help new users discover Notion's value, improve onboarding experiences, and increase user engagement.Platform and infrastructure: Contribute to the systems that power Notion's backend services, ensuring reliability, scalability, and performance as our user base grows.Skills You’ll BringProven track record of execution: You have a minimum of 1 year (and up to 3 years) of full-time professional engineering experience, including building world-class product experiences as part of an engineering team. You have solid fundamentals in data structures, algorithms, and distributed systems, with a product-minded, pragmatic approach to solving problems.Thoughtful problem-solving: You approach problems holistically, starting with a clear and accurate understanding of the context. You think about the implications of what you're building and how it will impact real people's lives. You can navigate ambiguity successfully, decompose complex problems into clean solutions, while also balancing the business impact of what you’re building.Impact-driven approach to technology: You see technologies as tools to achieve user impact rather than ends in themselves. You care more about building successful systems that solve real problems than about using specific tech stacks or following trends. You stay current with the latest tools like Cursor, Claude Code, and other AI-assisted development environments, you're pragmatic about choosing the right tool for the job, focusing on what delivers the most value to users and the business.Proactive communication and high agency: You own your work, communicating clearly about progress and blockers. You don't wait for instructions for every step but rather show initiative in identifying what needs to be done and driving projects forward. You ask questions when needed while independently finding solutions to problems.Nice to HaveExperience with parts of our stack like React, TypeScript, Node.js, Postgres, or with experimentation and analytics tooling.Exposure to distributed systems, observability, CI/CD, or infrastructure fundamentals.An interest in product quality and craft, and in helping others stay in flow.You've heard of computing pioneers like Ada Lovelace, Douglas Engelbart, Alan Kay, and others—and understand why we're big fans of their work.We hire talented and passionate people from a variety of backgrounds because we want our global employee base to represent the wide diversity of our customers. If you’re excited about a role but your past experience doesn’t align perfectly with every bullet point listed in the job description, we still encourage you to apply. If you’re a builder at heart, share our company values, and enthusiastic about making software toolmaking ubiquitous, we want to hear from you.Notion is proud to be an equal opportunity employer. We do not discriminate in hiring or any employment decision based on race, color, religion, national origin, age, sex (including pregnancy, childbirth, or related medical conditions), marital status, ancestry, physical or mental disability, genetic information, veteran status, gender identity or expression, sexual orientation, or other applicable legally protected characteristic. Notion considers qualified applicants with criminal histories, consistent with applicable federal, state and local law. Notion is also committed to providing reasonable accommodations for qualified individuals with disabilities and disabled veterans in our job application procedures. If you need assistance or an accommodation due to a disability, please let your recruiter know.Notion is committed to providing highly competitive cash compensation, equity, and benefits. The compensation offered for this role will be based on multiple factors such as location, the role’s scope and complexity, and the candidate’s experience and expertise, and may vary from the range provided below. For roles based in San Francisco or New York City, the estimated base salary range for this role is $126,000 - $180,000 per year.By clicking “Submit Application”, I understand and agree that Notion and its affiliates and subsidiaries will collect and process my information in accordance with Notion’s Global Recruiting Privacy Policy.",
+      "requirements": [
+        "essential to Notion's culture",
+        "Experience with parts of our stack like React, TypeScript, Node",
+        "person collaboration is essential to Notion's culture",
+        "Skills You’ll BringProven track record of execution: You have a minimum of 1 year (and up to 3 years) of full"
+      ],
+      "job_type": "Full-time",
+      "skills": [
+        "Data Science",
+        "React",
+        "Typescript",
+        "Ci/Cd",
+        "Go",
+        "Express",
+        "Less",
+        "Scala",
+        "Ai",
+        "Node.Js",
+        "R"
+      ],
+      "posted_date": "2025-09-06",
+      "job_url": "https://www.linkedin.com/jobs/view/software-engineer-fullstack-early-career-at-notion-4296646591?position=1&pageNum=0&refId=tRcxjCOOdmcdfCpT%2BO3y5A%3D%3D&trackingId=5igzPJ6DrnIdyrH4viy9mA%3D%3D",
+      "salary": "$126,000.00/yr - $180,000.00/yr",
+      "category": "Software Engineering",
+      "is_trusted_company": true,
+      "experience_level": "Mid Level",
+      "employment_type": "Full-time"
+    },
+    {
+      "title": "Full Stack Engineer, Post Training",
+      "company": "OpenAI",
+      "location": "San Francisco, CA",
+      "description": "About The TeamPost-Training is responsible for training the models to be deployed into ChatGPT, the API, and future products. The team partners closely with research and product teams across the company, and conducts research as a final step to prepare for real world deployment to millions of users, ensuring that our models are safe, efficient, and reliable.About The RoleWe are looking for a self-starter full stack engineer who can help us rapidly prototype and develop internal products or tools used by researchers, such as visualization for our evaluation of models. You should be comfortable being truly full stack, such as building front-end from scratch and debugging backend and data pipelines. Ideal candidates are comfortable being scrappy and working independently at fast speeds.This role is based in San Francisco, CA. We use a hybrid work model of 3 days in the office per week and offer relocation assistance to new employees.In This Role, You WillRapidly prototype and build tooling or visualization for researchers.Collaborate with research teams to build full stack tooling.Design, implement, test, and debug code across our research stack.You Might Thrive In This Role If YouHave experience building backend infrastructure that is easy to maintain.Have experience building products that end users interface with.Have experience experience shipping things quickly with competing priorities or deadlines.Proficiency with JavaScript, React, and other web technologies.Proficiency with some backend language (we use Python).Have mastered multiple programming languages and feel comfortable spinning up new services from scratch.Are a team player, willing to do a variety of tasks that move the team forward.About OpenAIOpenAI is an AI research and deployment company dedicated to ensuring that general-purpose artificial intelligence benefits all of humanity. We push the boundaries of the capabilities of AI systems and seek to safely deploy them to the world through our products. AI is an extremely powerful tool that must be created with safety and human needs at its core, and to achieve our mission, we must encompass and value the many different perspectives, voices, and experiences that form the full spectrum of humanity.We are an equal opportunity employer, and we do not discriminate on the basis of race, religion, color, national origin, sex, sexual orientation, age, veteran status, disability, genetic information, or other applicable legally protected characteristic.For additional information, please see OpenAI’s Affirmative Action and Equal Employment Opportunity Policy Statement.Qualified applicants with arrest or conviction records will be considered for employment in accordance with applicable law, including the San Francisco Fair Chance Ordinance, the Los Angeles County Fair Chance Ordinance for Employers, and the California Fair Chance Act. For unincorporated Los Angeles County workers: we reasonably believe that criminal history may have a direct, adverse and negative relationship with the following job duties, potentially resulting in the withdrawal of a conditional offer of employment: protect computer hardware entrusted to you from theft, loss or damage; return all computer hardware in your possession (including the data contained therein) upon termination of employment or end of assignment; and maintain the confidentiality of proprietary, confidential, and non-public information. In addition, job duties require access to secure and protected information technology systems and related data security obligations.To notify OpenAI that you believe this job posting is non-compliant, please submit a report through this form. No response will be provided to inquiries unrelated to job posting compliance.We are committed to providing reasonable accommodations to applicants with disabilities, and requests can be made via this link.OpenAI Global Applicant Privacy PolicyAt OpenAI, we believe artificial intelligence has the potential to help people solve immense global challenges, and we want the upside of AI to be widely shared. Join us in shaping the future of technology.Compensation Range: $255K - $405K",
+      "requirements": [
+        "mastered multiple programming languages and feel comfort"
+      ],
+      "job_type": "Full-time",
+      "skills": [
+        "Javascript",
+        "Rust",
+        "React",
+        "Java",
+        "Python",
+        "Ai",
+        "R",
+        "Artificial Intelligence"
+      ],
+      "posted_date": "2025-08-30",
+      "job_url": "https://www.linkedin.com/jobs/view/full-stack-engineer-post-training-at-openai-4242752317?position=9&pageNum=2&refId=pkoRpSpWHO9Ypb3hzjLYmA%3D%3D&trackingId=lFcZDY706EZXHzGK5w%2BiwQ%3D%3D",
+      "salary": "$255,000.00/yr - $405,000.00/yr",
+      "category": "Other",
+      "is_trusted_company": true,
+      "experience_level": "Mid Level",
+      "employment_type": "Full-time"
+    },
+    {
+      "title": "Backend/API Engineer, Money as a Service (US)",
+      "company": "Stripe",
+      "location": "San Francisco, CA",
+      "description": "Note: if you are an intern, new grad, staff, frontend or fullstack applicant, please do not apply using this link and visit our jobs page for those specific postings.Who we areAbout StripeStripe is a financial infrastructure platform for businesses. Millions of companies - from the world’s largest enterprises to the most ambitious startups - use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the GDP of the internet, and we have a staggering amount of work ahead. That means you have an unprecedented opportunity to put the global economy within everyone's reach while doing the most important work of your career.About The OrganizationMoney as a Service (MaaS) Sub-orgs within MaaS: Accounts and Connect, Money Movement and Storage (MMS), Stripe’s Banking-as-a-Service (BaaS), CryptoMoney as a Service (MaaS) oversees a diverse portfolio of Stripe's core products and platforms. These offerings facilitate the global movement and management of funds for users. The teams that fall under the MaaS umbrella include: Accounts and Connect, Money Movement and Storage (MMS), Crypto and Banking as a Service (BaaS). Together, these teams work to ensure Stripe users have the robust financial infrastructure and tools they need to power their businesses on a global scale.Team Matching: exact team matching for one of the subteams will begin during final stages. Please note we may also consider you for different orgs based on your experience, location, etc. More information on our team matching process can be found here.What you’ll doWe’re looking for Backend Engineers who want to make an impact on managing money at a global scale with a passion for building ergonomic APIs. You’ll play a key role in extending our balance management platform and in building out a new funds accessibility platform leveraged by enterprises and SMBs alike. Our team collaborates with many cross-functional teams – from Infrastructure to Product – at Stripe to deliver innovative solutions that address evolving user needs.ResponsibilitiesScope, design, build, and maintain APIs, services, and large-scale systems that reliably and efficiently handle billions of money movement requestsDebug and solve critical production issues across services and multiple levels of the stackMentor engineers to help them growCollaborate with stakeholders across the company to build new features at large-scale, while improving internal engineering standards, tooling, and processesCollaborate effectively in a distributed and hybrid team, maintaining open communication and strong connections with colleaguesWho you areWe're looking for someone who meets the minimum requirements to be considered for the role. If you meet these requirements, you are encouraged to apply. The preferred qualifications are a bonus, not a requirement.Minimum Requirements2-12+ years of industry software engineering experience (does not include internships nor includes co-ops)Strong coding skills in any programming language (we understand new languages can be learned on the job so our interview process is language agnostic)Strong collaboration skills, can work across workstreams within your team and contribute to your peers’ successHave the ability to thrive on a high level of autonomy, responsibility, and think of yourself as entrepreneurialInterest in working as a generalist across varying technologies and stacks to solve problems and delight both internal and external usersPreferred QualificationsExperience with large-scale financial tracking systemsGood understanding and practical knowledge in cloud based services (e.g. gRPC, GraphQL, Docker/Kubernetes, cloud services such as AWS, etc.)Hybrid work at StripeThis role is available either in an office or a remote location (35+ miles or 56+ km from a Stripe office).In-office expectationsOffice-assigned Stripes spend at least 50% of the time in a given month in their local office or with users. This hits a balance between bringing people together for in-person collaboration and learning from each other, while supporting flexibility about how to do this in a way that makes sense for individuals and their teams.Working remotely at StripeA remote location is defined as being 35 miles (56 kilometers) or more from one of our offices. While you would be welcome to come into the office for team/business meetings, on-sites, meet-ups, and events, our expectation is you would regularly work from home rather than a Stripe office. Stripe does not cover the cost of relocating to a remote location. We encourage you to apply for roles that match the location where you currently live or plan to live.Pay and benefitsThe annual US base salary range for this role is $141,500 - $212,300. For sales roles, the range provided is the role’s On Target Earnings (\"OTE\") range, meaning that the range includes both the sales commissions/sales bonuses target and annual base salary for the role. This salary range may be inclusive of several career levels at Stripe and will be narrowed during the interview process based on a number of factors, including the candidate’s experience, qualifications, and location. Applicants interested in this role and who are not located in the US may request the annual salary range for their location during the interview process.Additional benefits for this role may include: equity, company bonus or sales commissions/bonuses; 401(k) plan; medical, dental, and vision benefits; and wellness stipends.Hybrid work at StripeThis role is available either in an office or a remote location (35+ miles or 56+ km from a Stripe office).In-office expectationsOffice-assigned Stripes spend at least 50% of the time in a given month in their local office or with users. This hits a balance between bringing people together for in-person collaboration and learning from each other, while supporting flexibility about how to do this in a way that makes sense for individuals and their teams.Working remotely at StripeA remote location is defined as being 35 miles (56 kilometers) or more from one of our offices. While you would be welcome to come into the office for team/business meetings, on-sites, meet-ups, and events, our expectation is you would regularly work from home rather than a Stripe office. Stripe does not cover the cost of relocating to a remote location. We encourage you to apply for roles that match the location where you currently live or plan to live.",
+      "requirements": [
+        "Experience with large-scale financial tracking systemsGood understanding and practical knowledg",
+        "The preferred qualifications are a bonus, not a requirement",
+        "Minimum Requirements2"
+      ],
+      "job_type": "Full-time",
+      "skills": [
+        "Go",
+        "Docker",
+        "Ai",
+        "Kubernetes",
+        "Aws",
+        "R"
+      ],
+      "posted_date": "2025-09-06",
+      "job_url": "https://www.linkedin.com/jobs/view/backend-api-engineer-money-as-a-service-us-at-stripe-4271103100?position=10&pageNum=5&refId=pnlMLnl7VLLPYb0nHqIdUQ%3D%3D&trackingId=d7EtTMgBDFbCTr2ThSpFug%3D%3D",
+      "salary": "$141,500.00/yr - $212,300.00/yr",
+      "category": "Software Engineering",
+      "is_trusted_company": true,
+      "experience_level": "Mid Level",
+      "employment_type": "Full-time"
+    },
+    {
+      "title": "Software Engineer, Infrastructure",
+      "company": "OpenAI",
+      "location": "San Francisco, CA",
+      "description": "About The TeamWe’re hiring Software Engineers to join our broader Infrastructure organization, which supports multiple high-impact teams. Depending on your interests and experience, you could work on one of several focus areas—including Core Distributed Systems, Reliability Engineering, Observability, Developer Productivity or Cloud Infrastructure.About The RoleAll teams are deeply collaborative, work on mission-critical services, and are responsible for building distributed, scalable infrastructure to bring OpenAI’s technology to the world through products like ChatGPT and the OpenAI API. You’ll work closely with stakeholders to understand infrastructure, data and compute needs, setting the technical strategy that supports cutting-edge research and product development. This is a critical role for someone who is passionate about solving complex engineering problems at scale, ensuring their performance, scalability and reliabilityTeam Focus AreasDistributed Systems: Owning and building important, highly scalable, available, performant, and reliable distributed systems (and their building blocks) to power the entire stack at OpenAI Systems Engineering: Work across layers of the stack—debugging system bottlenecks, evolving core infrastructure, and solving novel problems in performance and scalability.Reliability Engineering: Build scalable, fault-tolerant systems and lead efforts around service health, incident response, and resilience.Observability: Design and maintain observability tooling (metrics, logs, tracing) to give teams visibility into production systems at scale.Developer Productivity: Create tools, environments, and workflows that help engineers ship high-quality software faster and more safely.Cloud Infrastructure: Own the cloud-native infrastructure (compute, networking, storage) that underpins all services and research workloads.Databases: Building high performance, distributed database systems that power all of OpenAI's product stack. In This Role You WillDesign, build, and maintain reliable and performant systems used across engineering. Work with your team to define technical strategy, architecture, and long-term goals.Collaborate with other engineers, product managers, and researchers to build infrastructure that meets evolving needs.Improve internal tooling, automation, and developer experience.Contribute to incident response, postmortems, and the development of best practices around system reliability and scalability.You Might Thrive In This Role If YouStrong software engineering skills with experience in Python, Go, C++, Rust, or similar languages.Experience designing, operating, or scaling distributed systems or developer infrastructure.Comfort working in Linux environments, and with tools like Kubernetes, Terraform, CI/CD pipelines, and modern observability stacks.Ability to navigate complex systems and a willingness to dig deep when debugging tricky issues.Excellent communication and collaboration skills, especially in cross-functional settings.Qualifications4+ years of relevant industry experience, with 2+ years leading large scale, complex projects or teams as an engineer or tech leadA passion for distributed systems at scale with a focus on reliability, scalability, security, and continuous improvement. Excellent communication skills, with ability to build consensus among stakeholders both internally and externally.About OpenAIOpenAI is an AI research and deployment company dedicated to ensuring that general-purpose artificial intelligence benefits all of humanity. We push the boundaries of the capabilities of AI systems and seek to safely deploy them to the world through our products. AI is an extremely powerful tool that must be created with safety and human needs at its core, and to achieve our mission, we must encompass and value the many different perspectives, voices, and experiences that form the full spectrum of humanity.We are an equal opportunity employer, and we do not discriminate on the basis of race, religion, color, national origin, sex, sexual orientation, age, veteran status, disability, genetic information, or other applicable legally protected characteristic.For additional information, please see OpenAI’s Affirmative Action and Equal Employment Opportunity Policy Statement.Qualified applicants with arrest or conviction records will be considered for employment in accordance with applicable law, including the San Francisco Fair Chance Ordinance, the Los Angeles County Fair Chance Ordinance for Employers, and the California Fair Chance Act. For unincorporated Los Angeles County workers: we reasonably believe that criminal history may have a direct, adverse and negative relationship with the following job duties, potentially resulting in the withdrawal of a conditional offer of employment: protect computer hardware entrusted to you from theft, loss or damage; return all computer hardware in your possession (including the data contained therein) upon termination of employment or end of assignment; and maintain the confidentiality of proprietary, confidential, and non-public information. In addition, job duties require access to secure and protected information technology systems and related data security obligations.To notify OpenAI that you believe this job posting is non-compliant, please submit a report through this form. No response will be provided to inquiries unrelated to job posting compliance.We are committed to providing reasonable accommodations to applicants with disabilities, and requests can be made via this link.OpenAI Global Applicant Privacy PolicyAt OpenAI, we believe artificial intelligence has the potential to help people solve immense global challenges, and we want the upside of AI to be widely shared. Join us in shaping the future of technology.Compensation Range: $210K - $405K",
+      "requirements": [],
+      "job_type": "Full-time",
+      "skills": [
+        "Rust",
+        "Linux",
+        "Ci/Cd",
+        "Go",
+        "Python",
+        "Scala",
+        "Terraform",
+        "Kubernetes",
+        "C++",
+        "Ai",
+        "R",
+        "Artificial Intelligence"
+      ],
+      "posted_date": "2025-08-30",
+      "job_url": "https://www.linkedin.com/jobs/view/software-engineer-infrastructure-at-openai-4256484492?position=8&pageNum=7&refId=s5TxyGJ17dB0arswij57Mg%3D%3D&trackingId=TEY6aRtViz2Xd2a%2F1Wqk3g%3D%3D",
+      "salary": "$210,000.00/yr - $405,000.00/yr",
+      "category": "Software Engineering",
+      "is_trusted_company": true,
+      "experience_level": "Mid Level",
+      "employment_type": "Full-time"
+    },
+    {
+      "title": "Backend Engineer - Infrastructure",
+      "company": "HeyGen",
+      "location": "San Francisco, CA",
+      "description": "About HeyGenAt HeyGen, our mission is to make visual storytelling accessible to all. Over the last decade, visual content has become the preferred method of information creation, consumption, and retention. But the ability to create such content, in particular videos, continues to be costly and challenging to scale. Our ambition is to build technology that equips more people with the power to reach, captivate, and inspire audiences.Learn more at www.heygen.com. Visit our Mission and Culture doc here.Position SummaryAs a Backend Engineer (Infrastructure) at HeyGen, you'll spearhead the development of core systems and infrastructure crucial to powering our products. Your expertise will be instrumental in crafting scalable, reliable, and efficient backend systems tailored to accommodate our expanding user base.Key ResponsibilitiesSystem Development: Design, develop, and deploy scalable and efficient foundational systems. Examples include:Data Infrastructure: Forge the next generation of data systems to fuel our analyticsStreaming Infrastructure: Lay the groundwork for our innovative Streaming Avatar product.ML Infrastructure: Construct the ML training infrastructure to enhance our AI researchers' productivity, and inference systems to optimize the scalability and performance of our video GenAI.Image/Video Infrastructure: Establish the bedrock to empower our avatar video capabilities.Dev Tools: Create developer tools to enhance velocity.Collaboration: Work closely with product engineers, AI researchers to deliver best performant systems.Performance Monitoring: Monitor backend systems for performance, errors, and anomalies. Implement fixes and improvements as needed.Code Quality: Maintain high code quality through regular code reviews, pair programming, and writing unit and integration tests.Continuous Learning: Stay updated with the latest system technologies and best practices to ensure HeyGen remains at the forefront of technology.QualificationsBachelor's degree in Computer Science, Engineering, or a related field.2+ years of experience in backend development.Proficiency in python, golang, c++ or java.Experience with relational and NoSQL databases, such as PostgreSQL, MySQL, MongoDB.Familiarity with cloud platforms like AWS, Azure, or GCP.Strong knowledge of API design and development.Preferred QualificationsMaster's degree in Computer Science, Engineering, or a related field.Experience with container orchestration tools like Kubernetes.Experience with Graphics API like OpenGL, Vulkan, etc.Experience with Streaming protocol like WebRTC.Experience with Machine Learning Infrastructure especially computer vision.Familiarity with microservices architecture.Prior experience in a startup or fast-paced tech environment.What HeyGen OffersCompetitive salary and benefits package.Dynamic and inclusive work environment.Opportunities for professional growth and advancement.Collaborative culture that values innovation and creativity.Access to the latest technologies and tools.Salary Range$180,000 – 240,000 annuallyPlease note that the salary information is a general guideline only. HeyGen considers factors such as scope and responsibilities of the position, candidate's work experience, education/training, key skills, and internal equity, as well as location, market and business considerations when extending an offer. As part of our total rewards package, HeyGen offers comprehensive benefits including a 401k plan, health benefits, generous PTO, a parental leave program and emotional health resources.HeyGen is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees.",
+      "requirements": [
+        "Bachelor's degree in Computer Science, Engineering, or a r",
+        "Master's degree in Computer Science, Engineering, or a r",
+        "Proficiency in python, golang, c++ or java",
+        "Experience with relational and NoSQL databases, such as PostgreSQL, MySQL, MongoDB",
+        "knowledge of API design and development",
+        "Experience with container orchestration tools like Kubernetes",
+        "Experience with Graphics API like OpenGL, Vulkan, etc",
+        "Experience with Streaming protocol like WebRTC"
+      ],
+      "job_type": "Full-time",
+      "skills": [
+        "Machine Learning",
+        "Java",
+        "Azure",
+        "Sql",
+        "Go",
+        "Postgresql",
+        "Mongodb",
+        "Python",
+        "Css",
+        "Scala",
+        "Ai",
+        "Kubernetes"
+      ],
+      "posted_date": "2024-11-04",
+      "job_url": "https://www.linkedin.com/jobs/view/backend-engineer-infrastructure-at-heygen-4068401151?position=7&pageNum=10&refId=qe9ZnkAVpoCHPsAMbYbwCQ%3D%3D&trackingId=8qaD2Cz0yBJMMmUqEnGeLw%3D%3D",
+      "salary": "$180,000.00/yr - $240,000.00/yr",
+      "category": "Other",
+      "is_trusted_company": true,
+      "experience_level": "Mid Level",
+      "employment_type": "Full-time"
+    },
+    {
+      "title": "Fullstack Software Engineer",
+      "company": "HeyGen",
+      "location": "San Francisco, CA",
+      "description": "About HeyGenAt HeyGen, our mission is to make visual storytelling accessible to all. Over the last decade, visual content has become the preferred method of information creation, consumption, and retention. But the ability to create such content, in particular videos, continues to be costly and challenging to scale. Our ambition is to build technology that equips more people with the power to reach, captivate, and inspire audiences.Learn more at www.heygen.com. Visit our Mission and Culture doc here.Position SummaryAs a full stack engineering on the product eng team you will be working on the most crucial product features to heygen. As a full stack developer you will be expected to take end to end ownership of feature all the way from the frontend to backend API to ML models. You are someone who is passionate about creating impactful AI products, high levels of ownership and growth mindset. Tech Stack: Typescript, react, python, GoKey ResponsibilitiesDevelopment: Design, develop, test, and deploy robust, scalable, and optimized features for the HeyGen platform across both front-end and back-end components.Collaboration: Work closely with UX/UI designers, product managers, and other engineering teams to deliver a holistic product experience to our users.Maintenance & Optimization: Monitor platform performance, identify bottlenecks, and implement solutions in a timely manner. Ensure the platform remains updated, secure, and compliant with the latest industry standards.QualificationsBachelor's degree in Computer Science, Engineering, or a related field.3+ years of experience in Full Stack Software Development.Experienced with React, Javascript, Python, etcExperienced with RESTful API development.Familiarity with cloud platforms such as AWS, Azure, or GCP.Familiarity with database systems such as MySQLWhat HeyGen OffersCompetitive salary and benefits package.Dynamic and inclusive work environment.Opportunities for professional growth and advancement.Collaborative culture that values innovation and creativity.Access to the latest technologies and tools.Salary Range$180,000 – $215,000 annuallyPlease note that the salary information is a general guideline only. HeyGen considers factors such as scope and responsibilities of the position, candidate's work experience, education/training, key skills, and internal equity, as well as location, market and business considerations when extending an offer. As part of our total rewards package, HeyGen offers comprehensive benefits including a 401k plan, health benefits, generous PTO, a parental leave program and emotional health resources.HeyGen is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees.",
+      "requirements": [
+        "Bachelor's degree in Computer Science, Engineering, or a r",
+        "Over the last decade, visual content has become the preferred method of information creation, consumption, and retention",
+        "QualificationsBachelor's degree in Computer Science, Engineering, or a related field",
+        "3+ years of experience in Full Stack Software Development"
+      ],
+      "job_type": "Full-time",
+      "skills": [
+        "Javascript",
+        "React",
+        "Typescript",
+        "Java",
+        "Azure",
+        "Sql",
+        "Go",
+        "Python",
+        "Scala",
+        "Ai",
+        "Aws",
+        "Gcp"
+      ],
+      "posted_date": "2025-08-12",
+      "job_url": "https://www.linkedin.com/jobs/view/fullstack-software-engineer-at-heygen-4283975460?position=1&pageNum=12&refId=yxM%2FYqEqG5XllAChnn1eXA%3D%3D&trackingId=e3OEOC92URxQtl0WCSuaTQ%3D%3D",
+      "salary": "$180,000.00/yr - $215,000.00/yr",
+      "category": "Software Engineering",
+      "is_trusted_company": true,
+      "experience_level": "Mid Level",
+      "employment_type": "Full-time"
+    }
+  ]
+}

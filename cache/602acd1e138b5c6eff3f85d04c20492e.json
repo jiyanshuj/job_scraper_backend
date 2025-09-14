@@ -1,0 +1,83 @@
+{
+  "timestamp": "2025-09-14T16:53:06.494940",
+  "cache_key": "602acd1e138b5c6eff3f85d04c20492e",
+  "metadata": {
+    "keywords": "React Developer",
+    "location": "Austin, TX",
+    "max_jobs": 10,
+    "job_type_filter": null,
+    "category_filter": null,
+    "trusted_only": true,
+    "scraped_at": "2025-09-14T16:53:06.494940"
+  },
+  "job_count": 2,
+  "data": [
+    {
+      "title": "Junior Full Stack Engineer - AI Healthcare",
+      "company": "Co-Intelligence Labs",
+      "location": "Austin, TX",
+      "description": "About Co-Intelligence LabsWe're a well-funded AI startup in stealth mode building intelligent platforms that transform healthcare decision-making. Our mission is to make complex healthcare navigation effortless through AI-powered recommendations and conversational interfaces that are secure, scalable, and accessible to everyone.About the RoleAs a Junior Fullstack Engineer, you'll contribute to our next-generation healthcare recommendation platform while learning from experienced engineers. You'll work across the technology stack, from frontend interfaces to backend services, while gaining exposure to cutting-edge AI integrations. This is an excellent opportunity to grow your skills in a modern tech environment.You'll work with technologies like Next.js, React Native, NestJS, and AI services while collaborating closely with senior engineers, designers, and product teams. We'll provide mentorship and guidance as you contribute to features that help users navigate healthcare decisions through AI-powered conversations.Location: Austin, TX (relocation assistance provided)In this role, you will:• Contribute to fullstack development across web (Next.js/React + Tailwind), mobile (React Native/Expo), and backend (NestJS) with guidance from senior engineers• Learn AI integration by working on conversational user experiences and helping implement AI features across our platform• Build basic data components• Support deployment processes on AWS and learn about CI/CD pipelines, environment management, and production systems• Develop API endpoints for features like messaging and user management while learning best practices for error handling and testing• Collaborate with the team to understand product requirements, participate in code reviews, and contribute to technical discussions• Learn through real projects by working on user-facing features while receiving feedback and guidance on code quality and architectureYou might thrive in this role if you:• Have foundational programming skills with experience in JavaScript/TypeScript, React, and basic backend development (internships, projects, or coursework count!)• Are eager to learn AI technologies and interested in understanding how AI can solve real-world problems• Know some of our tech stack - familiarity with React, Node.js, databases, or similar technologies (we'll teach you the specifics)• Have built projects during school, internships, or personal time - web apps, mobile apps, or full-stack projects demonstrate your interest in development• Are curious and collaborative - you ask questions, seek feedback, and enjoy working with others to solve problems• Care about making an impact in healthcare and want to build technology that helps people make better decisions• Communicate well and can explain your code and thought process to teammates, even when you're still learning• Are excited about growth - you want to develop your skills rapidly in a mentorship-rich environment• Enjoy playing with new technologies - we’re all pushing the envelope with how we develop products and we expect you to do the sameAbout the CompanyCo-Intelligence Labs is an equal opportunity employer dedicated to using AI to solve pressing human challenges, starting with healthcare navigation. We're committed to building AI systems that prioritize safety, user empowerment, and diverse perspectives to benefit society broadly.We believe in investing in new talent and providing mentorship opportunities for junior engineers to grow their careers in AI and healthcare technology.We pay above market for startups and offer generous equity compensation.Questions? Contact jobs@cointelligencelabs.com",
+      "requirements": [],
+      "job_type": "Full-time",
+      "skills": [
+        "Less",
+        "Javascript",
+        "Aws",
+        "Typescript",
+        "Ci/Cd",
+        "Scala",
+        "React Native",
+        "R",
+        "Ai",
+        "Node.Js",
+        "Java",
+        "React"
+      ],
+      "posted_date": "2025-08-21",
+      "job_url": "https://www.linkedin.com/jobs/view/junior-full-stack-engineer-ai-healthcare-at-co-intelligence-labs-4289065247?position=10&pageNum=0&refId=XMIak8pvwFLUsv8Gh8DlWQ%3D%3D&trackingId=nvVxoDAjkCPxH%2By%2BOzru4g%3D%3D",
+      "salary": "",
+      "category": "Product & Design",
+      "is_trusted_company": true,
+      "experience_level": "Entry Level",
+      "employment_type": "Full-time"
+    },
+    {
+      "title": "Senior Software Engineer, Full Stack Web Development",
+      "company": "General Motors",
+      "location": "Austin, TX",
+      "description": "Job DescriptionSenior Software Engineer, Full Stack Web DevelopmentHybrid: This role is categorized as hybrid. This means the successful candidate is expected to report to the Austin IT Innovation Center in Austin, TX three times per week, at minimum.We are the Brands & Marketing Software Engineering Team within the Digital Products Engineering (DPE) organization at GM. Our team collaborates closely with marketing leaders from across GM to build easy to use tooling to create engaging and innovative experiences at scale while providing meaningful value to our customers through a seamless customer experience.Our mission is to rapidly and relentlessly ideate, iterate, and launch the next generation of innovative solutions to connect GM with current and future customers. Our team comprises industry-leading software and quality engineers, who utilize a variety of innovative development methodologies and technologies to achieve breakthrough results, drive innovation, and delight customers.The RoleWe are looking for an exceptional software engineer who is excited about building web products across General Motors. You will be responsible for helping lead our engineering efforts through planning, design and architecture, execution, and ramp. As a technical leader on the team, you will be able to help mentor less experienced engineers, build strong relationships with technical leaders on other teams, and facilitate a strong team culture.What You’ll DoDevelop competency across our complete web technologies stack (client, framework, and services)Produce high quality software that is unit tested, code reviewed, and checked in regularly for continuous integrationBe a tech lead and will actively mentor other engineers on the teamInvestigate & resolve performance bottlenecksLead efforts to automate testingWork on API, Content management, edge and cloud systemsLeverage your technical leadership to ensure we adhere to engineering best practices, and evangelize opportunities to improve engineering productivity and craftsmanshipAdditional Job DescriptionYour Skills & Abilities (Required Qualifications) Bachelor's Degree in Computer Science or related field, or equivalent work experience5+ years of experience in web application development including frontend technologies (HTML / CSS / JavaScript) and backend languages (Java, server-side JavaScript and/or python)Experience with automation tasks, Kubernetes, CDNs/Edge Compute (like Akamai) and/or Microsoft AzureFamiliarity with JavaScript Web Components and Custom Elements2+ years of experience contributing to the architecture, documentation and design of new and existing systems (architecture, design patterns, reliability, and scaling)Must be able to do performance analysis, write unit tests, and be knowledgeable about automationExperience working with multi-tier production software systems utilizing and building HTTP APIs (REST, GraphQL) and Content Management SystemsDemonstrated ability to understand the tech stack, debug code and testsEnthusiastic about the opportunity of impacting the engineering culture from the bottom upWhat Will Give You a Competitive Edge (Preferred Qualifications)   Master's Degree in Computer Science or related field7+ years of experience in web frontend, application & services developmentExpertise in JS ES2020+ and experience with JS frameworks like ReactJSExpertise in multiple of our preferred backend languages (Java, Python, JavaScript)5+ years of experience contributing to the architecture, documentation and design of new and existing systems (architecture, design patterns, reliability, and scaling)Experience with Content Management Systems like Adobe Experience ManagerExperience with Edge Compute / Content Delivery platforms like Akamai and cloud platforms such as Microsoft AzureExperience with cloud automation technology such as Helm, Terraform, and ArgoCDThis job is not eligible for relocation benefits. Any relocation costs would be the responsibility of the selected candidate.GM DOES NOT PROVIDE IMMIGRATION-RELATED SPONSORSHIP FOR THIS ROLE. DO NOT APPLY FOR THIS ROLE IF YOU WILL NEED GM IMMIGRATION SPONSORSHIP NOW OR IN THE FUTURE. THIS INCLUDES DIRECT COMPANY SPONSORSHIP, ENTRY OF GM AS THE IMMIGRATION EMPLOYER OF RECORD ON A GOVERNMENT FORM, AND ANY WORK AUTHORIZATION REQUIRING A WRITTEN SUBMISSION OR OTHER IMMIGRATION SUPPORT FROM THE COMPANY (e.g., H-1B, OPT, STEM OPT, CPT, TN, J-1, etc.)About GMOur vision is a world with Zero Crashes, Zero Emissions and Zero Congestion and we embrace the responsibility to lead the change that will make our world better, safer and more equitable for all.Why Join UsWe believe we all must make a choice every day – individually and collectively – to drive meaningful change through our words, our deeds and our culture. Every day, we want every employee to feel they belong to one General Motors team.Benefits OverviewFrom day one, we're looking out for your well-being–at work and at home–so you can focus on realizing your ambitions. Learn how GM supports a rewarding career that rewards you personally by visiting Total Rewards Resources.Non-Discrimination and Equal Employment Opportunities (U.S.)General Motors is committed to being a workplace that is not only free of unlawful discrimination, but one that genuinely fosters inclusion and belonging. We strongly believe that providing an inclusive workplace creates an environment in which our employees can thrive and develop better products for our customers.All employment decisions are made on a non-discriminatory basis without regard to sex, race, color, national origin, citizenship status, religion, age, disability, pregnancy or maternity status, sexual orientation, gender identity, status as a veteran or protected veteran, or any other similarly protected status in accordance with federal, state and local laws.We encourage interested candidates to review the key responsibilities and qualifications for each role and apply for any positions that match their skills and capabilities. Applicants in the recruitment process may be required, where applicable, to successfully complete a role-related assessment(s) and/or a pre-employment screening prior to beginning employment. To learn more, visit How we Hire.AccommodationsGeneral Motors offers opportunities to all job seekers including individuals with disabilities. If you need a reasonable accommodation to assist with your job search or application for employment, email us or call us at 800-865-7580. In your email, please include a description of the specific accommodation you are requesting as well as the job title and requisition number of the position for which you are applying.",
+      "requirements": [
+        "Required Qualifications) Bachelor's Degree in Computer Science or related field, or equivalent work experienc",
+        "Bachelor's Degree in Computer Science or related field, or",
+        "Master's Degree in Computer Science or related field7+ y",
+        "Experience with automation tasks, Kubernetes, CDNs/Edge Compute (like Akamai) and/or Microsoft",
+        "experience with JS frameworks like ReactJSExpertise in multiple of our preferred backend langua",
+        "Experience with Content Management Systems like Adobe Experience ManagerExperience with Edge Co",
+        "Experience with cloud automation technology such as Helm, Terraform, and ArgoCDThis job is not",
+        "This means the successful candidate is expected to report to the Austin IT Innovation Center in Austin, TX three times per week, at minimum"
+      ],
+      "job_type": "Full-time",
+      "skills": [
+        "Less",
+        "Javascript",
+        "Aws",
+        "Azure",
+        "Kubernetes",
+        "Terraform",
+        "Git",
+        "Go",
+        "R",
+        "Css",
+        "Ai",
+        "Html"
+      ],
+      "posted_date": "2025-09-14",
+      "job_url": "https://www.linkedin.com/jobs/view/senior-software-engineer-full-stack-web-development-at-general-motors-4250703522?position=5&pageNum=2&refId=ucig65yDt0%2BfG9tBN1gNWA%3D%3D&trackingId=ZM5ChszEiONjIdu0rx0f%2Fw%3D%3D",
+      "salary": "",
+      "category": "Software Engineering",
+      "is_trusted_company": true,
+      "experience_level": "Senior",
+      "employment_type": "Full-time"
+    }
+  ]
+}
