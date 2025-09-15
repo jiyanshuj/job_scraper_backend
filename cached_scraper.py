@@ -43,12 +43,12 @@ class RedisCachedJobScraper:
             logger.error(f"Initialization error: {str(e)}")
             raise
     
-    def get_jobs(self, keywords: str = "software engineer", location: str = "United States", 
+    def get_jobs(self, keywords: str = "software engineer", location: str = "United States",
                 max_jobs: int = 50, job_type_filter: str = None, category_filter: str = None,
                 trusted_only: bool = True, force_refresh: bool = False) -> List[Dict]:
         """
-        Get jobs with Redis caching support and advanced filtering
-        
+        Get jobs with Redis caching support - checks cache first for matching jobs before scraping
+
         Args:
             keywords: Job search keywords
             location: Job location
@@ -57,27 +57,64 @@ class RedisCachedJobScraper:
             category_filter: Filter by job category
             trusted_only: Only return jobs from trusted companies
             force_refresh: If True, bypass cache and scrape fresh data
-        
+
         Returns:
             List of job dictionaries with Redis caching
         """
-        
-        # Generate cache key with all parameters
+
+        # Generate cache key with all parameters for search result caching
         cache_key = self.cache.generate_cache_key(
             keywords, location, max_jobs, job_type_filter, category_filter, trusted_only
         )
-        
+
         logger.info(f"Searching jobs with cache key: {cache_key[:12]}...")
-        
-        # Try to load from Redis cache first (unless force refresh)
+
+        # First, try to load exact search results from Redis cache (unless force refresh)
         if not force_refresh:
             cached_data = self.cache.load_from_cache(cache_key)
             if cached_data:
-                logger.info(f"Returning {cached_data['job_count']} jobs from Redis cache")
+                logger.info(f"Returning {cached_data['job_count']} jobs from exact search Redis cache")
                 return cached_data['data']
-        
-        # Scrape fresh data with enhanced parameters
-        logger.info("Cache miss or force refresh - scraping fresh data from LinkedIn")
+
+        # Second, check for individual jobs in cache that match the search criteria
+        if not force_refresh:
+            logger.info("Checking individual cached jobs for matches...")
+            cached_jobs = self.search_cached_jobs(
+                title_keyword=keywords if keywords else None,
+                company_keyword=None,  # We'll filter by keywords in title/description
+                location_keyword=location if location != "United States" else None,  # Only filter if specific location
+                remote_only=False,  # Will be handled by location filtering
+                trusted_only=trusted_only,
+                limit=max_jobs * 2  # Get more than needed to allow for filtering
+            )
+
+            # Filter cached jobs more precisely
+            filtered_cached_jobs = []
+            keywords_lower = keywords.lower() if keywords else ""
+            location_lower = location.lower() if location else ""
+
+            for job in cached_jobs:
+                # Check if job matches search criteria
+                title_match = not keywords or keywords_lower in job.get('title', '').lower()
+                company_match = True  # We'll accept any company for now
+                location_match = not location or location_lower in job.get('location', '').lower()
+
+                # Additional filtering based on job type and category if specified
+                job_type_match = not job_type_filter or job.get('job_type', '').lower() == job_type_filter.lower()
+                category_match = not category_filter or category_filter == 'All' or job.get('category', '') == category_filter
+
+                if title_match and company_match and location_match and job_type_match and category_match:
+                    filtered_cached_jobs.append(job)
+
+            # If we found enough jobs in cache, return them
+            if len(filtered_cached_jobs) >= max_jobs:
+                logger.info(f"Found {len(filtered_cached_jobs)} matching jobs in Redis cache - using cached data")
+                return filtered_cached_jobs[:max_jobs]
+
+            logger.info(f"Found {len(filtered_cached_jobs)} cached jobs, but need {max_jobs} - proceeding to scrape")
+
+        # Cache miss or insufficient cached jobs - scrape fresh data
+        logger.info("Cache miss or insufficient cached jobs - scraping fresh data from LinkedIn")
         jobs_data = self.scraper.scrape_jobs(
             keywords=keywords,
             location=location,
@@ -86,7 +123,7 @@ class RedisCachedJobScraper:
             category_filter=category_filter,
             trusted_only=trusted_only
         )
-        
+
         # Enhanced metadata for Redis storage
         metadata = {
             'keywords': keywords,
@@ -99,14 +136,14 @@ class RedisCachedJobScraper:
             'scraper_version': '2.0',
             'source': 'LinkedIn'
         }
-        
+
         # Save to Redis with comprehensive job fields
         success = self.cache.save_to_cache(cache_key, jobs_data, metadata)
         if success:
             logger.info(f"Successfully cached {len(jobs_data)} jobs in Redis")
         else:
             logger.warning("Failed to save data to Redis cache")
-        
+
         return jobs_data
     
     def search_cached_jobs(self, title_keyword: str = None, company_keyword: str = None,
