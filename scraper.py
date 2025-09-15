@@ -467,12 +467,80 @@ class LinkedInJobScraper:
         
         return filtered_jobs
     
-    def scrape_jobs(self, keywords: str = "software engineer", location: str = "United States", 
+    def make_request_with_backoff(self, url: str, params: Dict = None, max_retries: int = 3,
+                                base_timeout: int = 30) -> requests.Response:
+        """
+        Make HTTP request with exponential backoff and retry logic
+
+        Args:
+            url: URL to request
+            params: Query parameters
+            max_retries: Maximum number of retry attempts
+            base_timeout: Base timeout in seconds
+
+        Returns:
+            Response object
+
+        Raises:
+            Exception: If all retries fail
+        """
+        for attempt in range(max_retries):
+            try:
+                response = self.session.get(url, params=params, timeout=base_timeout)
+
+                # Handle rate limiting (429 Too Many Requests)
+                if response.status_code == 429:
+                    wait_time = 2 ** attempt  # Exponential backoff
+                    logger.warning(f"Rate limited (429). Waiting {wait_time}s before retry {attempt + 1}/{max_retries}")
+                    time.sleep(wait_time)
+                    continue
+
+                # Handle other client/server errors
+                if response.status_code >= 400:
+                    if attempt == max_retries - 1:
+                        logger.error(f"Request failed with status {response.status_code} after {max_retries} attempts")
+                        response.raise_for_status()
+                    else:
+                        wait_time = 2 ** attempt
+                        logger.warning(f"Request failed with status {response.status_code}. Retrying in {wait_time}s (attempt {attempt + 1}/{max_retries})")
+                        time.sleep(wait_time)
+                        continue
+
+                return response
+
+            except requests.exceptions.Timeout as e:
+                if attempt == max_retries - 1:
+                    logger.error(f"Request timed out after {max_retries} attempts: {str(e)}")
+                    raise
+                wait_time = 2 ** attempt
+                logger.warning(f"Request timed out. Retrying in {wait_time}s (attempt {attempt + 1}/{max_retries})")
+                time.sleep(wait_time)
+
+            except requests.exceptions.ConnectionError as e:
+                if attempt == max_retries - 1:
+                    logger.error(f"Connection error after {max_retries} attempts: {str(e)}")
+                    raise
+                wait_time = 2 ** attempt
+                logger.warning(f"Connection error. Retrying in {wait_time}s (attempt {attempt + 1}/{max_retries})")
+                time.sleep(wait_time)
+
+            except Exception as e:
+                if attempt == max_retries - 1:
+                    logger.error(f"Request failed after {max_retries} attempts: {str(e)}")
+                    raise
+                wait_time = 2 ** attempt
+                logger.warning(f"Request failed: {str(e)}. Retrying in {wait_time}s (attempt {attempt + 1}/{max_retries})")
+                time.sleep(wait_time)
+
+        # This should never be reached, but just in case
+        raise Exception(f"Request failed after {max_retries} attempts")
+
+    def scrape_jobs(self, keywords: str = "software engineer", location: str = "United States",
                    max_jobs: int = 50, job_type_filter: str = None, category_filter: str = None,
                    trusted_only: bool = True) -> List[Dict]:
         """
-        Main method to scrape LinkedIn jobs with advanced filtering
-        
+        Main method to scrape LinkedIn jobs with advanced filtering and retry logic
+
         Args:
             keywords: Job search keywords
             location: Job location
@@ -480,81 +548,78 @@ class LinkedInJobScraper:
             job_type_filter: Filter by job type (full-time, part-time, contract, internship)
             category_filter: Filter by job category
             trusted_only: Only return jobs from trusted companies
-        
+
         Returns:
             List of job dictionaries
         """
         all_jobs = []
         start = 0
         count = 25
-        
+
         logger.info(f"Starting job scraping: keywords='{keywords}', location='{location}', "
                    f"max_jobs={max_jobs}, trusted_only={trusted_only}")
-        
+
         while len(all_jobs) < max_jobs:
             try:
                 params = self.build_search_params(keywords, location, start, count, job_type_filter)
-                
+
                 logger.info(f"Fetching jobs: start={start}, count={count}")
-                
-                response = self.session.get(self.base_url, params=params, timeout=20)
-                
-                if response.status_code != 200:
-                    logger.error(f"Failed to fetch data: Status {response.status_code}")
-                    break
-                
+
+                # Use enhanced request method with retry and backoff
+                response = self.make_request_with_backoff(self.base_url, params=params, max_retries=3, base_timeout=30)
+
                 soup = BeautifulSoup(response.content, 'html.parser')
                 job_cards = soup.find_all('div', class_=['base-card', 'job-search-card'])
-                
+
                 if not job_cards:
                     logger.info("No more job cards found")
                     break
-                
+
                 jobs_added_this_batch = 0
-                
+
                 for card in job_cards:
                     if len(all_jobs) >= max_jobs:
                         break
-                    
+
                     job_data = self.extract_job_details(str(card))
-                    
+
                     # Skip if company is not trusted (when trusted_only is True)
                     if trusted_only and not job_data['is_trusted_company']:
                         continue
-                    
+
                     # Get detailed description if URL is available
                     if job_data['job_url']:
                         detailed_info = self.get_job_description(job_data['job_url'])
                         job_data.update(detailed_info)
-                    
+
                     # Determine job category
                     job_data['category'] = self.get_job_category(
-                        job_data['title'], 
+                        job_data['title'],
                         job_data.get('description', '')
                     )
-                    
+
                     all_jobs.append(job_data)
                     jobs_added_this_batch += 1
-                    
+
                     # Add delay to be respectful to LinkedIn's servers
                     time.sleep(0.5)
-                
+
                 # If no jobs were added in this batch, break to avoid infinite loop
                 if jobs_added_this_batch == 0:
                     logger.info("No qualifying jobs found in this batch")
                     break
-                
+
                 start += count
                 time.sleep(2)  # Delay between pages
-                
+
             except Exception as e:
                 logger.error(f"Error during scraping: {str(e)}")
                 break
-        
+
         # Apply category filter if specified
         if category_filter and category_filter != 'All':
             all_jobs = self.filter_by_category(all_jobs, category_filter)
-        
+
         logger.info(f"Successfully scraped {len(all_jobs)} jobs")
         return all_jobs
     
